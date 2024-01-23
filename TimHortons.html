@@ -1,0 +1,209 @@
+<link rel="stylesheet" href="tims.css">
+<script src="tims.js" async></script>
+<script type="module" src="./my-module.js"></script>
+<style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap'); */
+</style>
+
+<body onload="setUp()">
+
+    <div class="main-title"> R8 what u 8</div>
+
+
+    <div class="container">
+
+        <div class="popup-container" id="popupContainer">
+            <div class="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <div id="popupContent">
+                </div>
+                <br>
+                <br>
+                <button class="nav-btn previous" onclick="showPreviousTip()">Previous</button>
+                <button class="nav-btn" onclick="showNextTip()">Next</button>
+            </div>
+        </div>
+    
+    
+        <div class="popup-container" id="popupContainer2">
+            <div class="popup" id="popup2"
+                style="width:500px; height:500px; margin-top: 30px; background-color: floralwhite; font-size: 31px; font-family:monospace;"
+                ;>
+                <span class="close-btn" onclick="closePopup2()">&times;</span>
+                <div id="popupContent2">
+                    Pizza, burgers, McDonald's
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+
+    <div class="sidebar" id="sidebar">
+
+        <div class="user-login-navbar reduce-font-size">
+            <img src="assets/user-icon.png" alt="user-login" class="reduce-width">
+            User login
+        </div>
+        <hr>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="trending-navbar reduce-font-size">
+                        <img src="assets/light-icon.jpeg" alt="light-icon" class="reduce-width">
+                        Trending
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#" class="favorites-navbar reduce-font-size">
+                        <img src="assets/heart-icon.png" alt="fav-icon" class="reduce-width">
+                        My Favorites
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="myRate.html" class="ratings-navbar reduce-font-size">
+                        <img src="assets/star-icon.jpeg" alt="star-icon" class="reduce-width">
+                        My Ratings
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#" class="tips-navbar reduce-font-size" onclick="openPopup()">
+                        <img src="assets/help2-icon.jpeg" alt="help-icon" class="reduce-width">
+                        Tips
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#" class="dark-mode-navbar reduce-font-size" id="darkModeToggle">
+                        <img src="assets/moon-icon.png" alt="moon-icon" class="reduce-width">
+                        <span id="darkModeText">Dark mode</span>
+                        <!-- dark mode -->
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#" class="hide-navbar reduce-font-size">
+                        <img src="assets/hide-navbar.png" alt="hide-navbar-icon" class="reduce-width">
+                        <button id="hideButton">Resize navbar</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- main part -->
+    <main>
+        <div class="search-container">
+            <form action="" class="search">
+                <input type="text" id="search-input" placeholder="New search" class="search-input"
+                    onkeydown="handleKeyDown(event)">
+                <button type="reset" class="search-bar-btn" onclick=search()>
+                    <img src="assets/search-icon.png">
+                </button>
+            </form>
+        </div>
+
+        <div class="breadcrumbs"> </div>
+
+        <div class="content" id="restaurant-name">
+            <h1>Tim Hortons</h1>
+        </div>
+        <div id="imageSlider" class="content">
+            <div id="imageList">
+                <img class="image" id="image1"
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/94/Tim_Hortons_Logo.png" alt="Image 1">
+                <img class="image" id="image2"
+                    src="https://bloximages.chicago2.vip.townnews.com/insidehalton.com/content/tncms/assets/v3/editorial/e/fa/efaf28fd-a53e-56ad-973e-fd1576b10473/646272dfd1124.image.jpg"
+                    alt="Image 2">
+                <img class="image" id="image3"
+                    src="https://www.indystar.com/gcdn/-mm-/2425a0470766b558967df12696ca47cade450c8d/c=149-99-2888-1647/local/-/media/2018/01/20/INGroup/Indianapolis/636520357268068995--us-images-Tim-Hortons-Exterior-2.jpg?width=2739&height=1548&fit=crop&format=pjpg&auto=webp"
+                    alt="Image 3">
+            </div>
+            <button id="prevBtn" onclick="prevImage()">&#8249;</button>
+            <button id="nextBtn" onclick="nextImage()">&#8250;</button>
+        </div>
+
+        <div class="content">
+            <h2 id="div2-welcome">What we've picked for you</h2>
+            <div class="menu-items" id="menu-items"></div>
+            <p></p>
+        </div>
+
+        <div class="content">
+            <h2>Menu</h2>
+            <div id="menu-button-grid">
+            </div>
+            <div id="rating-page-wrapper">
+                <div id=star-rating></div>
+                <div id=user-comments></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="content">
+        <h2>Reviews</h2>
+        <div>
+            <button type="button" id="rBut" class="raBut" onclick="rate()">Add a New Rating!</button>
+            <p></p>
+            food:⭐⭐⭐⭐✩ Service:⭐⭐⭐⭐✩ Atmosphere:⭐⭐⭐⭐✩
+        </div>
+        <div id="reviews">
+            <p><var>someGuy: </var> one of my favorite places</p>
+            <p><var>doug smith: </var> I know whats good, and whats good is this place</p>
+        </div>
+        <br><br>
+        <div id="reviewer">
+            FOOD
+            <!--<input type="range" min="0" max="5" value="3" id="foodRate">-->
+            <label for="fader"></label><input class="slider" type="range" min="0" max="5" value="3" id="fader"
+                list="volsettings"><datalist id="volsettings">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </datalist>
+
+            SERVICE
+            <!--<input type="range" min="0" max="5" value="3" id="serviceRate">-->
+            <label for="fader"></label><input class="slider" type="range" min="0" max="5" value="3" id="serviceRate"
+                list="volsettings"><datalist id="volsettings">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </datalist>
+            ATMOSPHERE
+            <!--<input type="range" min="0" max="5" value="3" id="atmoRate">-->
+            <label for="fader"></label><input class="slider" type="range" min="0" max="5" value="3" id="atmoRate"
+                list="volsettings"><datalist id="volsettings">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </datalist>
+            <form>
+                <P></P>
+                have more to say? <br>
+                <textarea rows="15" cols="60" id="textBox" spellcheck="true"></textarea>
+            </form>
+            <button type="button" class="subbutton" onclick="postReview()">submit</button> <button type="button"
+                class="cbutton" onclick="cancel()">cancel</button>
+        </div>
+    </div>
+</body>
+
+</html>

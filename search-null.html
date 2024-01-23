@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <title>
+        Search
+    </title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <title>R8 What You A8 - Search</title>
+
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+
+    <body>
+        <div class="popup-container" id="popupContainer">
+            <div class="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <div id="popupContent">
+                </div>
+                <br>
+                <br>
+                <button class="nav-btn previous" onclick="showPreviousTip()">Previous</button>
+                <button class="nav-btn" onclick="showNextTip()">Next</button>
+            </div>
+        </div>
+
+        <div class="popup-container" id="popupContainer2">
+            <div class="popup" id="popup2"
+                style="width:500px; height:500px; margin-top: 30px; background-color: floralwhite; font-size: 31px; font-family:monospace;"
+                ;>
+                <span class="close-btn" onclick="closePopup2()">&times;</span>
+                <div id="popupContent2">
+                    Pizza, burgers, McDonald's
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="main-title"> R8 what u 8</div>
+    
+        <div class = "search-container">
+            <form action = "" class = "search">
+                <input type = "text" id = "search-input" placeholder = "New search" class = "search-input" onkeydown="handleKeyDown(event)">  
+                <button type = "reset" class = "search-bar-btn" onclick = search()>
+                    <img src = "assets/search-icon.png">
+                </button>
+            </form>
+        </div>
+
+        <div class="search-suggestions">
+            Search Suggestions:
+            <a href="#" onclick="openPopup2()"><b> SHOW ALL SUGGESTIONS (10 more...) </b></a>
+        </div>
+
+        <div id="popupContainer2" style="display: none;">
+            <div id="popupContent2"></div>
+        </div>
+        
+        <div class = "result-container">
+            <div class = "breadcrumbs">
+                <a href = "index.html">Home</a>
+                >
+                <a href = "search-empty.html">Search</a>
+            </div>
+
+            <h2 style="text-align: center;"><u><em>THERE ARE NO RESULTS</em></u></h2>
+        </div>
+
+        <p><a href="#" id="backToTop">Back to Top</a></p>
+
+        <!-- NAVIGATION BAR -->
+        <div class="sidebar" id="sidebar">
+
+            <div class="user-login-navbar reduce-font-size">
+                <img src="assets/user-icon.png" alt="user-login" class="reduce-width">
+                User login
+            </div>
+            <hr>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" class="trending-navbar reduce-font-size">
+                            <img src="assets/light-icon.jpeg" alt="light-icon" class="reduce-width">
+                            Trending
+                        </a>
+                    </li>
+                    <hr>
+
+                    <li>
+                        <a href="#" class="favorites-navbar reduce-font-size">
+                            <img src="assets/heart-icon.png" alt="fav-icon" class="reduce-width">
+                            My Favorites
+                        </a>
+                    </li>
+                    <hr>
+
+                    <li>
+                        <a href="myRate.html" class="ratings-navbar reduce-font-size">
+                            <img src="assets/star-icon.jpeg" alt="star-icon" class="reduce-width">
+                            My Ratings
+                        </a>
+                    </li>
+                    <hr>
+
+                    <li>
+                        <a href="#" class="tips-navbar reduce-font-size" onclick="openPopup()">
+                            <img src="assets/help2-icon.jpeg" alt="help-icon" class="reduce-width">
+                            Tips
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#" class="dark-mode-navbar reduce-font-size" id="darkModeToggle">
+                            <img src="assets/moon-icon.png" alt="moon-icon" class="reduce-width">
+                            <span id="darkModeText">Dark mode</span>
+                            <!-- dark mode -->
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#" class="hide-navbar reduce-font-size">
+                            <img src="assets/hide-navbar.png" alt="hide-navbar-icon" class="reduce-width">
+                            <button id="hideButton">Resize navbar</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+       <script src="script.js"></script>
+    </body>
+</html>
