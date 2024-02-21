@@ -1,0 +1,321 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R8 what you 8</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script-home.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="main-title"> R8 what u 8</div>
+    <div class="bread-crumbs">
+        <a href="index.html"><u>home</u></a>
+    </div>
+
+
+
+    <!-- COPYYYYYY FOR SIDEBAR AND POPUP TIPS: START   -->
+
+
+    <div class="container">
+
+        <div class="popup-container" id="popupContainer">
+            <div class="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <div id="popupContent">
+                </div>
+                <br>
+                <br>
+                <button class="nav-btn previous" onclick="showPreviousTip()">Previous</button>
+                <button class="nav-btn" onclick="showNextTip()">Next</button>
+            </div>
+        </div>
+
+
+        <div class="popup-container" id="popupContainer2">
+            <div class="popup" id="popup2"
+                style="width:500px; height:500px; margin-top: 30px; background-color: floralwhite; font-size: 31px; font-family:monospace;"
+                ;>
+                <span class="close-btn" onclick="closePopup2()">&times;</span>
+                <div id="popupContent2">
+                    Pizza, burgers, McDonald's
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="sidebar" id="sidebar">
+
+        <div class="user-login-navbar reduce-font-size">
+            <img src="assets/user-icon.png" alt="user-login" class="reduce-width">
+            User login
+        </div>
+        <hr>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="trending-navbar reduce-font-size">
+                        <img src="assets/light-icon.jpeg" alt="light-icon" class="reduce-width">
+                        Trending
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#" class="favorites-navbar reduce-font-size">
+                        <img src="assets/heart-icon.png" alt="fav-icon" class="reduce-width">
+                        My Favorites
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="myRate.html" class="ratings-navbar reduce-font-size">
+                        <img src="assets/star-icon.jpeg" alt="star-icon" class="reduce-width">
+                        My Ratings
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#" class="tips-navbar reduce-font-size" onclick="openPopup()">
+                        <img src="assets/help2-icon.jpeg" alt="help-icon" class="reduce-width">
+                        Tips
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#" class="dark-mode-navbar reduce-font-size" id="darkModeToggle">
+                        <img src="assets/moon-icon.png" alt="moon-icon" class="reduce-width">
+                        <span id="darkModeText">Dark mode</span>
+                        <!-- dark mode -->
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#" class="hide-navbar reduce-font-size">
+                        <img src="assets/hide-navbar.png" alt="hide-navbar-icon" class="reduce-width">
+                        <button id="hideButton">Resize navbar</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- COPYYYYYY FOR SIDEBAR AND POPUP TIPS: END  -->
+    <!-- add a closing </div> -->
+
+
+    <div class="content">
+        <div class = "search-container">
+            <form action = "" class = "search">
+                <input type = "text" id = "search-input" placeholder = "New search" class = "search-input" onkeydown="handleKeyDown(event)">  
+                <button type = "reset" class = "search-bar-btn" onclick = search()>
+                    <img src = "assets/search-icon.png">
+                </button>
+            </form>
+        </div>
+        <div class="search-suggestions">
+            Search Suggestions:<a href="#"onclick="openPopup2()"><b>SHOW ALL SUGGESTIONS (10 more...) </b></a>
+        </div>
+        <div id="popupContainer2" style="display: none;">
+            <div id="popupContent2"></div>
+        </div>
+
+
+
+
+        <!-- <div class="content">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="New search" onkeydown="handleKeyDown(event)">
+
+                <button onclick=search()>Search</button>
+            </div>
+            <div class="search-suggestions">
+                Search Suggestions: <a href="search-mcd.html"><u>McDonalds</u></a>, <a href="search-tims.html"><u>Tim
+                        Hortons</u></a>, <a href="search-pizza.html"><u>Pizza</u></a>,
+                <a href="#" onclick="openPopup2()"><b> SHOW ALL SUGGESTIONS (10 more...) </b></a>
+            </div>
+            <div id="popupContainer2" style="display: none;">
+                <div id="popupContent2"></div>
+            </div> -->
+
+
+        <div class="trending-title">WHAT WE'RE R8ING 🔥</div>
+
+        <!-- Your main content goes here -->
+        <!-- Update the HTML for the trending section -->
+
+
+
+        <!-- Update the HTML for the trending section -->
+        <div class="main-content">
+            <div class="trending-container">
+
+                <a href="McDonalds.html" style="text-decoration: none;">
+                    <div class="trending-box">
+                        <div class="box-content">
+                            <t>McDonalds</t>
+                            <br><br>
+                            <r1>"Awesome food"</r1> <br><br>
+                            <r2> "Loved it"</r2> <br><br>
+                            <r3> "Best place in town "</r3>
+                            <br><br><br>
+                            <v1>Food:⭐⭐⭐⭐✩</v1><br>
+                            <v2>Service:⭐⭐⭐⭐⭐</v2><br>
+                            <v3>Atmosphere:⭐⭐⭐⭐⭐</v3><br>
+
+                        </div>
+                        <div class="trending-circle" id="trending1" style="width: 35%; text-decoration: none;">
+                            <img src="assets/mcd-pic1.jpeg" alt="Picture 1">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="StarBucks.html" style="text-decoration: none;">
+                    <div class="trending-box">
+                        <div class="box-content">
+                            <t>Starbucks</t>
+                            <br><br>
+                            <r1>"Friendly staff"</r1> <br><br>
+                            <r2> "Quick Service"</r2> <br><br>
+                            <r3> "Best Starbucks in town"</r3>
+                            <br><br><br>
+                            <v1>Food:⭐⭐⭐⭐✩</v1>
+                            <v2>Service:⭐⭐⭐✩✩</v2><br>
+                            <v3>Atmosphere:⭐⭐⭐⭐⭐</v3><br>
+                        </div>
+                        <div class="trending-circle" id="trending2">
+                            <img src="assets/starbux-logo-new.jpeg" alt="Picture 2">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="TimHortons.html" style="text-decoration: none;">
+                    <div class="trending-box">
+                        <div class="box-content">
+                            <t>Tim Hortons</t>
+                            <br><br>
+                            <r1>"Best Ice coffee ever"</r1> <br><br>
+                            <r2> "Fast drive-thru"</r2> <br><br>
+                            <r3> "Love their Ice Cappe"</r3>
+                            <br><br><br>
+                            <v1>Food:⭐⭐⭐✩✩</v1>
+                            <v2>Service:⭐⭐⭐⭐✩</v2><br>
+                            <v3>Atmosphere:⭐⭐⭐⭐⭐</v3><br>
+                        </div>
+                        <div class="trending-circle" id="trending3">
+                            <img src="assets/tims-logo.png" alt="Picture 3">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="PizzaPizza.html" style="text-decoration: none;">
+                    <div class="trending-box">
+                        <div class="box-content">
+                            <t>Pizza Pizza</t>
+                            <br><br>
+                            <r1>"Great side options"</r1> <br><br>
+                            <r2> "Spicy pizza is so good "</r2> <br><br>
+                            <r3> "Most yummy Pizza"</r3>
+                            <br><br><br>
+                            <v1>Food:⭐⭐⭐⭐✩</v1>
+                            <v2>Service:⭐⭐⭐⭐✩</v2><br>
+                            <v3>Atmosphere:⭐⭐⭐✩✩</v3><br>
+                        </div>
+                        <div class="trending-circle" id="trending4">
+                            <img src="assets/pizza-logo.png" alt="Picture 4">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="trending-title" style="margin-top: 70px;">CATEGORIES</div>
+
+        <div class="main-content">
+            <div class="trending-container">
+
+                <div class="trending-box">
+                    <div class="box-content">
+                    </div>
+                    <div class="trending-circle" id="trending1"
+                        style="width: 100%; height: 100%; margin-right:auto; margin-top: auto;"
+                        onclick="window.location.href='search-burgers.html';">
+                        <img src="assets/burger-logo.jpeg" alt="Picture 1">
+                    </div>
+
+                </div>
+
+
+
+                <div class="trending-box">
+                    <div class="box-content">
+
+                    </div>
+                    <div class="trending-circle" id="trending2"
+                        style="width: 100%; height: 100%; margin-right:auto; margin-top: auto;"
+                        onclick="window.location.href='search-veg.html';">
+                        <img src="assets/veg-logo.jpeg" alt="Picture 2">
+                    </div>
+                </div>
+
+                <div class="trending-box">
+                    <div class="box-content">
+
+                    </div>
+                    <div class="trending-circle" id="trending3"
+                        style="width: 100%; height: 100%; margin-right:auto; margin-top: auto;"
+                        onclick="window.location.href='search-coffee.html';">
+                        <img src="assets/coffee-logo.png" alt="Picture 3">
+                    </div>
+                </div>
+
+                <div class="trending-box">
+                    <div class="box-content">
+
+
+                    </div>
+                    <div class="trending-circle" id="trending4"
+                        style="width: 100%; height: 100%; margin-right:auto; margin-top: auto;"
+                        onclick="window.location.href='search-pizza.html';">
+                        <img src="assets/pizz-logo.jpeg" alt="Picture 4">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <div class ="temptitle"> testing the buttons</div> -->
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
